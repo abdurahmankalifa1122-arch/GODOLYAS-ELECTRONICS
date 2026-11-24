@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GODOLYAS ELECTRONICS | Page Redirect</title>
+    <script>
+      (function () {
+        var path = window.location.pathname;
+        var host = window.location.hostname;
+        var target = '/';
+        if (host.indexOf('github.io') !== -1) {
+          var segments = path.split('/').filter(Boolean);
+          if (segments.length > 0 && host.split('.')[0] !== segments[0]) {
+            target = '/' + segments[0] + '/';
+          }
+        }
+        if (path !== target) {
+          window.location.replace(target + window.location.hash);
+        }
+      })();
+    </script>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        background: #0b132b;
+        color: #f8fafc;
+        padding: 24px;
+      }
+      .card {
+        max-width: 460px;
+        width: 100%;
+        background: #0f172a;
+        border: 1px solid #1e293b;
+        border-radius: 16px;
+        padding: 32px;
+        text-align: center;
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: 1.25rem;
+      }
+      p {
+        margin: 0 0 20px;
+        color: #cbd5e1;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+      a.btn {
+        display: inline-block;
+        background: #2563eb;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+      .phones {
+        margin-top: 20px;
+        font-size: 0.85rem;
+        color: #94a3b8;
+      }
+      .phones a {
+        color: #93c5fd;
+        text-decoration: none;
+        margin: 0 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>GODOLYAS ELECTRONICS</h1>
+      <p>Return to the main GODOLYAS ELECTRONICS storefront, or reach our team directly by phone.</p>
+      <a class="btn" href="./">Go to Homepage</a>
+      <div class="phones">
+        Call:
+        <a href="tel:0116597020">0116597020</a>
+        <a href="tel:0960318181">0960318181</a>
+        <a href="tel:0116597030">0116597030</a>
+      </div>
+    </div>
+  </body>
+</html>

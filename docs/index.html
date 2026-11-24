@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GODOLYAS ELECTRONICS | Modern Electronics &amp; Technology Solutions</title>
+    <meta
+      name="description"
+      content="Discover quality electronics, smartphones, laptops, displays, home appliances, and audio solutions in Ethiopia with GODOLYAS ELECTRONICS. Call 0116597020, 0960318181, or 0116597030."
+    />
+    <meta property="og:title" content="GODOLYAS ELECTRONICS | Technology That Connects You to More" />
+    <meta
+      property="og:description"
+      content="Discover quality electronics and modern technology solutions with GODOLYAS ELECTRONICS in Ethiopia."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="./godolyas-logo.png" />
+    <link rel="apple-touch-icon" href="./godolyas-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="./assets/index-CMATrNLw.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-px-naHwg.css">
+  </head>
+  <body class="bg-slate-50 text-slate-900 antialiased selection:bg-blue-600 selection:text-white">
+    <div id="root"></div>
+    <script>
+      (function () {
+        var fallbackRendered = false;
+
+        function showFallback() {
+          if (fallbackRendered) return;
+          var root = document.getElementById('root');
+          if (!root || window.__GODOLYAS_MOUNTED__ || root.children.length > 0) return;
+          fallbackRendered = true;
+          root.innerHTML =
+            '<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:#0B132B;color:#F8FAFC;font-family:system-ui,-apple-system,sans-serif;padding:24px;text-align:center;">' +
+              '<div style="max-width:480px;width:100%;background:#0F172A;border:1px solid #1E293B;border-radius:16px;padding:32px;">' +
+                '<h1 style="margin:0 0 12px;font-size:22px;font-weight:700;">GODOLYAS ELECTRONICS</h1>' +
+                '<p style="margin:0 0 20px;color:#CBD5E1;font-size:14px;line-height:1.6;">The storefront could not finish loading. Please reload the page or contact our team directly by telephone.</p>' +
+                '<div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">' +
+                  '<button type="button" onclick="window.location.reload()" style="background:#2563EB;color:#fff;border:none;border-radius:8px;padding:10px 18px;font-size:14px;font-weight:600;cursor:pointer;">Reload Page</button>' +
+                  '<a href="tel:0116597020" style="color:#fff;border:1px solid #334155;border-radius:8px;padding:10px 14px;font-size:14px;text-decoration:none;">0116597020</a>' +
+                  '<a href="tel:0960318181" style="color:#fff;border:1px solid #334155;border-radius:8px;padding:10px 14px;font-size:14px;text-decoration:none;">0960318181</a>' +
+                  '<a href="tel:0116597030" style="color:#fff;border:1px solid #334155;border-radius:8px;padding:10px 14px;font-size:14px;text-decoration:none;">0116597030</a>' +
+                '</div>' +
+              '</div>' +
+            '</div>';
+        }
+
+        var isViteDev = Boolean(document.querySelector('script[src*="/@vite/client"]'));
+        var unbuiltEntry = document.querySelector('script[src*="/src/main.tsx"]');
+
+        if (!isViteDev && unbuiltEntry) {
+          fetch('./docs/index.html', { cache: 'no-store' })
+            .then(function (res) {
+              if (res.ok) {
+                window.location.replace('./docs/' + window.location.hash);
+              } else {
+                showFallback();
+              }
+            })
+            .catch(showFallback);
+          return;
+        }
+
+        window.addEventListener('error', function () {
+          window.setTimeout(showFallback, 100);
+        });
+
+        window.setTimeout(showFallback, 3000);
+      })();
+    </script>
+  </body>
+</html>
