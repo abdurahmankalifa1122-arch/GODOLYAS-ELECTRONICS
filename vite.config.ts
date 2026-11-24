@@ -5,17 +5,10 @@ import path from 'path';
 import {defineConfig} from 'vite';
 
 function resolveGitHubPagesBase(): string {
-  if (process.env.VITE_BASE_PATH) {
-    const cleaned = process.env.VITE_BASE_PATH.replace(/\/+$/, '');
-    return cleaned ? `${cleaned}/` : '/';
-  }
-  const repoFull = process.env.GITHUB_REPOSITORY;
-  if (repoFull) {
-    const repoName = repoFull.split('/')[1];
-    if (repoName && !repoName.endsWith('.github.io')) {
-      return `/${repoName}/`;
-    }
-    return '/';
+  const customBase = process.env.VITE_BASE_PATH?.trim();
+  if (customBase && customBase !== '/') {
+    const cleaned = customBase.replace(/\/+$/, '');
+    return cleaned ? `${cleaned}/` : './';
   }
   return './';
 }

@@ -27,5 +27,25 @@
   <body class="bg-slate-50 text-slate-900 antialiased selection:bg-blue-600 selection:text-white">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      window.setTimeout(function () {
+        var root = document.getElementById('root');
+        if (root && root.children.length === 0) {
+          root.innerHTML =
+            '<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:#0B132B;color:#F8FAFC;font-family:system-ui,-apple-system,sans-serif;padding:24px;text-align:center;">' +
+              '<div style="max-width:480px;width:100%;background:#0F172A;border:1px solid #1E293B;border-radius:16px;padding:32px;">' +
+                '<h1 style="margin:0 0 12px;font-size:22px;font-weight:700;">GODOLYAS ELECTRONICS</h1>' +
+                '<p style="margin:0 0 20px;color:#CBD5E1;font-size:14px;line-height:1.6;">The storefront could not finish loading. Please reload the page or contact our team directly by telephone.</p>' +
+                '<div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">' +
+                  '<button type="button" onclick="window.location.reload()" style="background:#2563EB;color:#fff;border:none;border-radius:8px;padding:10px 18px;font-size:14px;font-weight:600;cursor:pointer;">Reload Page</button>' +
+                  '<a href="tel:0116597020" style="color:#fff;border:1px solid #334155;border-radius:8px;padding:10px 14px;font-size:14px;text-decoration:none;">0116597020</a>' +
+                  '<a href="tel:0960318181" style="color:#fff;border:1px solid #334155;border-radius:8px;padding:10px 14px;font-size:14px;text-decoration:none;">0960318181</a>' +
+                  '<a href="tel:0116597030" style="color:#fff;border:1px solid #334155;border-radius:8px;padding:10px 14px;font-size:14px;text-decoration:none;">0116597030</a>' +
+                '</div>' +
+              '</div>' +
+            '</div>';
+        }
+      }, 3000);
+    </script>
   </body>
 </html>

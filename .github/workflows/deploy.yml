@@ -41,8 +41,6 @@ jobs:
 
       - name: Build for GitHub Pages
         run: npm run build
-        env:
-          VITE_BASE_PATH: ${{ steps.pages.outputs.base_path }}/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
